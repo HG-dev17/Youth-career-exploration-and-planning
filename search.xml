@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>义务维修常用教程</title>
+      <link href="/2024/05/25/20240525/%E4%B9%89%E5%8A%A1%E7%BB%B4%E4%BF%AE%E5%B8%B8%E7%94%A8/"/>
+      <url>/2024/05/25/20240525/%E4%B9%89%E5%8A%A1%E7%BB%B4%E4%BF%AE%E5%B8%B8%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="义务维修常用教程"><a href="#义务维修常用教程" class="headerlink" title="义务维修常用教程"></a>义务维修常用教程</h1><h2 id="1-C盘清理"><a href="#1-C盘清理" class="headerlink" title="1. C盘清理"></a>1. C盘清理</h2><h3 id="1-1-删除缓存"><a href="#1-1-删除缓存" class="headerlink" title="1.1 删除缓存"></a>1.1 删除缓存</h3><p>首先，Win+R打开运行，输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%temp%</span><br></pre></td></tr></table></figure><p>这个文件夹是Windows的缓存文件，可以全部删除（shift+delete）</p><h3 id="1-2-磁盘清理工具"><a href="#1-2-磁盘清理工具" class="headerlink" title="1.2 磁盘清理工具"></a>1.2 磁盘清理工具</h3><p>右键C盘，点击属性<br>Win10会有清理磁盘，点击即可打开磁盘清理，里面的内容可以全部勾选<br>Win11则是详细信息，进入详细信息以后点击临时文件，可以在临时文件内勾选删除<br><strong>注意，磁盘清理不是压缩磁盘，压缩以后这个盘就废了，电脑也会无法启动</strong><br><strong>注意，临时文件包括下载文件，如果下载文件夹内有需要的文件应自行备份</strong><br><strong>下载文件夹默认在C:\Users\你的电脑用户名\Downloads</strong><br>或者Win+R输入下面代码即可打开磁盘清理工具</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cleanmgr</span><br></pre></td></tr></table></figure><h3 id="1-3-移动桌面文件（不推荐，不要轻易使用）"><a href="#1-3-移动桌面文件（不推荐，不要轻易使用）" class="headerlink" title="1.3 移动桌面文件（不推荐，不要轻易使用）"></a>1.3 移动桌面文件（不推荐，不要轻易使用）</h3><p>D盘新建文件夹（Desktop），把桌面文件放到这个文件夹里<br>输入Win+R输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">regedit</span><br></pre></td></tr></table></figure><p>打开注册表，找到HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders，把Desktop的值改为桌面文件夹的路径(D:\Desktop)<br>最后重启</p><h3 id="1-4-休眠文件清理-（若C盘真的啥都清不了，可以使用）"><a href="#1-4-休眠文件清理-（若C盘真的啥都清不了，可以使用）" class="headerlink" title="1.4 休眠文件清理 （若C盘真的啥都清不了，可以使用）"></a>1.4 休眠文件清理 （若C盘真的啥都清不了，可以使用）</h3><p>打开开始菜单，找到命令提示符（cmd），右键以管理员身份运行<br>输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powercfg -h off</span><br></pre></td></tr></table></figure><p>然后重启即可<br>同理如果要恢复休眠文件，只需要输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powercfg -h on</span><br></pre></td></tr></table></figure><h3 id="1-5-清理软件缓存，尤其是QQ、微信"><a href="#1-5-清理软件缓存，尤其是QQ、微信" class="headerlink" title="1.5 清理软件缓存，尤其是QQ、微信"></a>1.5 清理软件缓存，尤其是QQ、微信</h3><p>可以在QQ、微信的设置中找到文件管理，把默认的缓存文件夹换到C盘以外的其他盘即可</p><h2 id="2-流氓软件清理"><a href="#2-流氓软件清理" class="headerlink" title="2 流氓软件清理"></a>2 流氓软件清理</h2><p>这里我们给每位成员发放了Geek卸载工具，直接打开工具删掉不需要的软件即可，面对不好删除的文件可以右键强力删除</p><h2 id="3-C盘扩容（将其他的盘的空间分给C盘）"><a href="#3-C盘扩容（将其他的盘的空间分给C盘）" class="headerlink" title="3 C盘扩容（将其他的盘的空间分给C盘）"></a>3 C盘扩容（将其他的盘的空间分给C盘）</h2><p>1.官网下载DiskGenius，打开软件后选择C盘，右键选择扩容分区（Ctrl_F12）<br>2.选择将哪个盘的容量分给C盘，比如选择D盘<br>3.选择调整容量，取多少的空间给C盘使用<br>4.点击开始，弹出确认信息，点击确认<br>5.后续会自动创建PE环境，后续步骤自动操作即可，不要在自动操作时乱动。等待重启完成即可。</p><h2 id="4-清灰"><a href="#4-清灰" class="headerlink" title="4 清灰"></a>4 清灰</h2><p>拆除螺丝，注意螺丝是否不同，如果不同需要分类摆放<br>拆除后盖，拿拨片撬开口子划一圈，注意有些电脑有附加的东西，拆后盖时小心拆下（拆盖真费力awa）<br>拿鼓吹和刷子边吹变清刷即可<br><strong>注意，佩戴静电手环或者清水洗手，否则尽量不要触摸主板，防止电流击穿主板（坏了要赔钱哦）</strong></p><h2 id="5-网络不显示，只剩蓝牙了"><a href="#5-网络不显示，只剩蓝牙了" class="headerlink" title="5 网络不显示，只剩蓝牙了"></a>5 网络不显示，只剩蓝牙了</h2><p>右键任务栏,打开任务栏设置，搜索网络和Internet，选择高级网络设置，点击网络重置，点击立即重置后重启电脑即可</p><h2 id="6-换-新增硬盘"><a href="#6-换-新增硬盘" class="headerlink" title="6 换&#x2F;新增硬盘"></a>6 换&#x2F;新增硬盘</h2><p>同清灰步骤拆开后盖，拔掉电源线，再拆开硬盘保护盖，将硬盘按照对应空位插好，如果有散热贴就贴上，改好保护盖，拧好保护盖螺丝<br><strong>注意，佩戴静电手环或者清水洗手，否则尽量不要触摸主板，防止电流击穿主板（坏了要赔钱哦）</strong><br>盖上后盖，但是不用急着装螺丝<br>启动电脑，右击计算机，管理（Win11需要点选择更多选项）<br>选择磁盘管理，右击新的磁盘点初始化磁盘，右击新的磁盘选择新建简单卷，选择格式化，选择NTFS，选择快速格式化，选择盘符，选择卷名，点击确定（一般都是直接下一步即可）<br>拖一个文件进入磁盘检查是否能够正常运行<br>如果能运行，关机装好螺丝即可</p><h2 id="7-触摸板无法使用"><a href="#7-触摸板无法使用" class="headerlink" title="7 触摸板无法使用"></a>7 触摸板无法使用</h2><p>1.检查F1~F12的按钮有没有能够操控触摸板的，检查是否开启鼠标控制触摸板，检查是否开启触摸板<br>2.点击【开始】–【设置】–【蓝牙和其他设备】–【触摸板】，如果为关，把触摸板开关打开<br>3.如果无法解决，下载触控板驱动，可以去官网下载</p><h2 id="8-摄像头无法使用"><a href="#8-摄像头无法使用" class="headerlink" title="8 摄像头无法使用"></a>8 摄像头无法使用</h2><p>检查是否有硬件保护摄像头开关，如物理遮挡，物理摄像头电源 </p><h2 id="9-其他问题"><a href="#9-其他问题" class="headerlink" title="9 其他问题"></a>9 其他问题</h2><p>1.记得提醒同学以后安装软件不要放到C盘哦</p><p>暂时没有什么其他问题，如果遇到其他问题，由于评论区还没做好（懒得做），所以只能可以联系作者进行补充。<br>喜欢我的文章可以点击下面赞赏码赞助作者哦（当然目前懒得放二维码，所以没有赞赏）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> GXNU </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 校计协 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown 基础教程</title>
       <link href="/2024/05/24/20240524/20240524/"/>
       <url>/2024/05/24/20240524/20240524/</url>
