@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>网易云缓存文件转mp3</title>
+      <link href="/2024/05/26/20240526/003/"/>
+      <url>/2024/05/26/20240526/003/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1. 安装依赖"></a>1. 安装依赖</h2><ul><li>安装任意版本python</li><li>新建文件夹，自定义名字即可</li><li>进入文件夹，新建py文件，输入以下代码<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用方法：将此脚本放进一个文件夹，在此文件夹地址栏输入cmd运行此脚本加上需要转换的uc文件路径</span></span><br><span class="line"></span><br><span class="line">fname =sys.argv[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(fname)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(fname, <span class="string">&quot;rb&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">c = f.read()</span><br><span class="line"></span><br><span class="line">arr = <span class="built_in">bytearray</span>(c)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(arr)):</span><br><span class="line">arr[i] ^= <span class="number">163</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(fname+<span class="string">&quot;.mp3&quot;</span>, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">f.write(<span class="built_in">bytes</span>(arr))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;ok&#x27;</span>)</span><br></pre></td></tr></table></figure>-保存</li></ul><h2 id="2-运行"><a href="#2-运行" class="headerlink" title="2. 运行"></a>2. 运行</h2><ul><li>打开文件夹，在目录栏输入cmd运行，输入以下代码<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你的py文件名.py+空格+你的uc文件路径</span><br><span class="line">举例：网易云缓存UC转mp3.py &quot;C:\Users\用户名\AppData\Local\Netease\CloudMusic\Cache\Cache\2129927846-320-d769e17c9df56f23b4826d1f79f682ec.uc&quot;</span><br></pre></td></tr></table></figure></li><li>或者更简便的方法就是直接将需要转换的文件拖入py文件即可。</li></ul><h2 id="3-原理"><a href="#3-原理" class="headerlink" title="3. 原理"></a>3. 原理</h2><ul><li>网易云缓存文件是.uc格式，而.uc文件是经过加密的，所以需要解密才能转换。</li><li>有大佬通过逆向发现解密方法就是将文件内容中的每个字节异或163（163代表网易），然后保存为.mp3文件。</li><li>此脚本就是通过python实现这个解密过程。</li></ul><h2 id="4-注意"><a href="#4-注意" class="headerlink" title="4. 注意"></a>4. 注意</h2><ul><li>此脚本只适用于网易云缓存文件，其他文件请自行修改脚本。</li><li>此脚本只适用于python3.x版本，其他版本请自行修改脚本。</li><li>此脚本只适用于Windows系统，其他系统请自行修改脚本。</li><li>此脚本只适用于64位系统，其他系统请自行修改脚本。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程语言 </category>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 网易云 </tag>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 黑科技 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>猜数字的小游戏+关机惩罚</title>
       <link href="/2024/05/26/20240526/002/"/>
       <url>/2024/05/26/20240526/002/</url>
@@ -20,7 +53,7 @@
       
         <tags>
             
-            <tag> C </tag>
+            <tag> C语言 </tag>
             
         </tags>
       
@@ -45,7 +78,7 @@
       
         <tags>
             
-            <tag> C </tag>
+            <tag> C语言 </tag>
             
         </tags>
       
