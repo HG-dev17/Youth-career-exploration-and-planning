@@ -11,3 +11,13 @@
     color: transparent;
     -webkit-animation: rainbowan 60s linear infinite;
 }
+@-webkit-keyframes rainbowan {
+    to {
+        background-position: -2000vw;
+    }
+}
+@keyframes rainbowan {
+    to {
+        background-position: -2000vw;
+    }
+}
