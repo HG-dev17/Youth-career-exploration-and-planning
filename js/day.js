@@ -37,7 +37,7 @@ if (m == 8 && dd == 14) {
 // 节假日
 if (m == 10 && dd <= 3) {//国庆节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("祝祖国" + (y - 1949).toString() + "岁生日快乐！");
+        Swal.fire("祝祖国" + (y - 1949).toString() + "岁生日快乐!");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
@@ -49,17 +49,17 @@ if (m == 8 && dd == 15) {//搞来玩的，小日子投降
 }
 if (m == 1 && dd == 1) {//元旦节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire(y.toString() + "年元旦快乐！🎉");
+        Swal.fire(y.toString() + "年元旦快乐!🎉");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
 if (m == 3 && dd == 8) {//妇女节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("各位女神们，妇女节快乐！👩");
+        Swal.fire("各位女神们，妇女节快乐!👩");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
-l = ["非常抱歉，因为不可控原因，博客将于明天停止运营！", "好消息，日本没了！", "美国垮了，原因竟然是川普！", "微软垮了！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"]
+l = ["非常抱歉，因为不可控原因，博客将于明天停止运营!", "好消息，日本没了!", "美国垮了，原因竟然是川普!", "微软垮了!", "你的电脑已经过载，建议立即关机!", "你知道吗？站长很喜欢你哦!", "一分钟有61秒哦", "你喜欢的人跟别人跑了!"]
 if (m == 4 && dd == 1) {//愚人节，随机谎话
     if (sessionStorage.getItem("isPopupWindow") != "1") {
         Swal.fire(l[Math.floor(Math.random() * l.length)]);
@@ -68,37 +68,43 @@ if (m == 4 && dd == 1) {//愚人节，随机谎话
 }
 if (m == 5 && dd == 1) {//劳动节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("劳动节快乐\n为各行各业辛勤工作的人们致敬！");
+        Swal.fire("劳动节快乐\n为各行各业辛勤工作的人们致敬!");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
 if (m == 5 && dd == 4) {//青年节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("青年节快乐\n青春不是回忆逝去,而是把握现在！");
+        Swal.fire("青年节快乐\n青春不是回忆逝去,而是把握现在!");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
 if (m == 5 && dd == 20) {//520
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("今年是520情人节\n快和你喜欢的人一起过吧！💑");
+        Swal.fire("今年是520情人节\n快和你喜欢的人一起过吧!💑");
+        sessionStorage.setItem("isPopupWindow", "1");
+    }
+}
+if (m == 6 && dd == 1) {//儿童节
+    if (sessionStorage.getItem("isPopupWindow") != "1") {
+        Swal.fire("今年是六一儿童节\n祝你每天甜甜的呀!💑");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
 if (m == 7 && dd == 1) {//建党节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("祝中国共产党" + (y - 1921).toString() + "岁生日快乐！");
+        Swal.fire("祝中国共产党" + (y - 1921).toString() + "岁生日快乐!");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
 if (m == 9 && dd == 10) {//教师节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("各位老师们教师节快乐！👩‍🏫");
+        Swal.fire("各位老师们教师节快乐!👩‍🏫");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
 if (m == 12 && dd == 25) {//圣诞节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("圣诞节快乐！🎄");
+        Swal.fire("圣诞节快乐!🎄");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
