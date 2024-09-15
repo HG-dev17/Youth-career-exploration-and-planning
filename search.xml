@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>信息学与信息学竞赛习题题解</title>
+      <link href="/2024/09/15/20240915/001/"/>
+      <url>/2024/09/15/20240915/001/</url>
+      
+        <content type="html"><![CDATA[<h1 id="信息学与信息学竞赛习题题解"><a href="#信息学与信息学竞赛习题题解" class="headerlink" title="信息学与信息学竞赛习题题解"></a>信息学与信息学竞赛习题题解</h1><p>本帖子会不断更新进度！~</p><h2 id="1-新建代码模板"><a href="#1-新建代码模板" class="headerlink" title="1.新建代码模板"></a>1.新建代码模板</h2><p>本次使用C++语言，新建一个代码模板，方便后续使用。在小熊猫工具-代码模板-C++中新建一个代码模板，内容如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h2><h3 id="1001：Hello-World"><a href="#1001：Hello-World" class="headerlink" title="1001：Hello,World!"></a>1001：Hello,World!</h3><details class="folding-tag" green><summary> 查看本题 </summary>              <div class='content'>              <p>编写一个能够输出“<code>Hello,World!</code>”的程序，这个程序常常作为一个初学者接触一门新的编程语言所写的第一个程序，也经常用来测试开发、编译环境是否能够正常工作。<br>提示：“<code>Hello,World!</code>”中间没空格。<br>【输入】<br>无<br>【输出】<br>Hello,World!<br>【输入样例】<br>（无）<br>【输出样例】<br><code>Hello,World!</code><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;Hello,World!&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>              </div>            </details><h3 id="1002：输出第二个整数"><a href="#1002：输出第二个整数" class="headerlink" title="1002：输出第二个整数"></a>1002：输出第二个整数</h3><details class="folding-tag" green><summary> 查看本题 </summary>              <div class='content'>              <p>【题目描述】<br>输入三个整数，整数之间由一个空格分隔，整数是32位有符号整数。把第二个输入的整数输出。<br>【输入】<br>只有一行，共三个整数，整数之间由一个空格分隔。整数是32位有符号整数。<br>【输出】<br>只有一行，一个整数，即输入的第二个整数。<br>【输入样例】<br><code>123 456 789</code><br>【输出样例】<br><code>456</code><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="type">int</span> x,y,z;</span><br><span class="line">cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</span><br><span class="line">cout &lt;&lt; y;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>              </div>            </details><h3 id="1003：对齐输出"><a href="#1003：对齐输出" class="headerlink" title="1003：对齐输出"></a>1003：对齐输出</h3><details class="folding-tag" green><summary> 查看本题 </summary>              <div class='content'>              <p>【题目描述】<br>读入三个整数，按每个整数占8个字符的宽度，右对齐输出它们，按照格式要求依次输出三个整数，之间以一个空格分开。<br>【输入】<br>只有一行，包含三个整数，整数之间以一个空格分开。<br>【输出】<br>只有一行，按照格式要求依次输出三个整数，之间以一个空格分开。<br>【输入样例】<br><code>123456789 0 -1</code><br>【输出样例】<br><code>123456789       0      -1</code><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> a,b,c;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%8d %8d %8d&quot;</span>,a,b,c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>              </div>            </details>]]></content>
+      
+      
+      <categories>
+          
+          <category> GXNU </category>
+          
+          <category> 教育技术学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教育技术学 </tag>
+            
+            <tag> 人才培养方案 </tag>
+            
+            <tag> 信息学竞赛 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>教育学部2023级教育技术学专业人才培养方案</title>
       <link href="/2024/06/13/20240613/001/"/>
       <url>/2024/06/13/20240613/001/</url>
@@ -22,7 +53,9 @@
       
         <tags>
             
-            <tag> 教育技术学，人才培养方案 </tag>
+            <tag> 教育技术学 </tag>
+            
+            <tag> 人才培养方案 </tag>
             
         </tags>
       
@@ -51,7 +84,11 @@
       
         <tags>
             
-            <tag> 英语，单词本，加密 </tag>
+            <tag> 加密 </tag>
+            
+            <tag> 英语 </tag>
+            
+            <tag> 单词本 </tag>
             
         </tags>
       
