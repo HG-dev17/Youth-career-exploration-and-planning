@@ -6,7 +6,7 @@
   #page-header {
     background: transparent !important;
   }
-  
+
   /* 白天模式遮罩透明 */
   #footer::before {
     background: transparent !important;
@@ -657,3 +657,89 @@ body::-webkit-scrollbar {
   top: 30%;
   text-align: center;
 }
+
+  /* 页脚心跳动画 */
+  #heartbeat {
+    color: red;
+    animation: iconAnimate 1s ease-in-out infinite;
+  }
+  @-moz-keyframes iconAnimate {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    10%,
+    30% {
+      transform: scale(0.9);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: scale(1.1);
+    }
+    50%,
+    70% {
+      transform: scale(1.1);
+    }
+  }
+  @-webkit-keyframes iconAnimate {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    10%,
+    30% {
+      transform: scale(0.9);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: scale(1.1);
+    }
+    50%,
+    70% {
+      transform: scale(1.1);
+    }
+  }
+  @-o-keyframes iconAnimate {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    10%,
+    30% {
+      transform: scale(0.9);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: scale(1.1);
+    }
+    50%,
+    70% {
+      transform: scale(1.1);
+    }
+  }
+  @keyframes iconAnimate {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    10%,
+    30% {
+      transform: scale(0.9);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: scale(1.1);
+    }
+    50%,
+    70% {
+      transform: scale(1.1);
+    }
+  }
