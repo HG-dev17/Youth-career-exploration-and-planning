@@ -135,9 +135,9 @@
       
       <categories>
           
-          <category> 年度目标 </category>
-          
           <category> 加密 </category>
+          
+          <category> 年度目标 </category>
           
       </categories>
       
@@ -230,18 +230,18 @@
           
           <category> music </category>
           
-          <category> 混音 </category>
-          
           <category> 比赛 </category>
+          
+          <category> 混音 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 大计赛 </tag>
-            
             <tag> 混音 </tag>
+            
+            <tag> 大计赛 </tag>
             
             <tag> StudioOne </tag>
             
@@ -338,9 +338,9 @@
       
         <tags>
             
-            <tag> 混音 </tag>
-            
             <tag> music </tag>
+            
+            <tag> 混音 </tag>
             
         </tags>
       
@@ -410,9 +410,9 @@
       
       <categories>
           
-          <category> 工具 </category>
-          
           <category> 编程语言 </category>
+          
+          <category> 工具 </category>
           
       </categories>
       
