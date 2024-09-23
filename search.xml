@@ -259,9 +259,9 @@
           
           <category> GXNU </category>
           
-          <category> music </category>
-          
           <category> 比赛 </category>
+          
+          <category> music </category>
           
           <category> 混音 </category>
           
@@ -307,9 +307,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> CRAIC </tag>
+            
+            <tag> Python </tag>
             
             <tag> ROS </tag>
             
