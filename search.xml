@@ -146,9 +146,9 @@
       
         <tags>
             
-            <tag> CET </tag>
-            
             <tag> 英语 </tag>
+            
+            <tag> CET </tag>
             
         </tags>
       
@@ -292,9 +292,9 @@
       
       <categories>
           
-          <category> GXNU </category>
-          
           <category> 编程语言 </category>
+          
+          <category> GXNU </category>
           
           <category> 比赛 </category>
           
