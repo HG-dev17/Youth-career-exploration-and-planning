@@ -4,6 +4,68 @@
   
     
     <entry>
+      <title>易语言制作刷屏器</title>
+      <link href="/2024/09/25/240925002/"/>
+      <url>/2024/09/25/240925002/</url>
+      
+        <content type="html"><![CDATA[<h1 id="易语言制作刷屏器"><a href="#易语言制作刷屏器" class="headerlink" title="易语言制作刷屏器"></a>易语言制作刷屏器</h1><p>注意：本文章仅供学习交流，请勿用于非法用途！<br>记得用易语言全选支持库，否则可能代码无法运行</p><ul><li>这个代码还增加了管理员不限速的功能，所以如果需要原始功能，可以自行删除部分代码 <h2 id="窗口界面"><a href="#窗口界面" class="headerlink" title="窗口界面"></a>窗口界面</h2>这里只介绍我们主要功能的界面内容，其余注释等UI、标签可自行添加。</li><li>编辑框（内容框）：用于显示当前鼠标点击的次数</li><li>超级按钮x2（开始、关闭）：用于控制程序开始和关闭</li><li>编辑框（速度框）：用于设置刷屏速度</li><li>透明标签1：用于显示当前刷屏的状态</li><li>时钟1：用于控制刷屏<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2>因为我这是写在另一个窗口上的，不是启动窗口，所以你可以使用<code>载入（窗口名，，假）</code>然后换行<code>销毁()</code>来调用这个窗口。<h3 id="刷屏器窗口代码"><a href="#刷屏器窗口代码" class="headerlink" title="刷屏器窗口代码"></a>刷屏器窗口代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">.版本 2</span><br><span class="line">.支持库 eAPI</span><br><span class="line">.支持库 iext</span><br><span class="line"></span><br><span class="line">.程序集 窗口程序集_刷屏器</span><br><span class="line"></span><br><span class="line">.子程序 _刷屏器_创建完毕</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.子程序 _时钟1_周期事件</span><br><span class="line"></span><br><span class="line">置剪辑板文本 (内容框.内容)</span><br><span class="line">模拟按键 (#Ctrl键, #V键, )</span><br><span class="line">模拟按键 (#回车键, , )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.子程序 _开始_被单击</span><br><span class="line"></span><br><span class="line">.如果 (速度框.内容 ＝ “” 或 速度框.内容 ＝ “请填写速度”)</span><br><span class="line">    速度框.内容 ＝ “1000”</span><br><span class="line"></span><br><span class="line">.否则</span><br><span class="line"></span><br><span class="line">.如果结束</span><br><span class="line">.如果 (管理员 ＝ 假)</span><br><span class="line">    .如果真 (到整数 (速度框.内容) ＜ 700)</span><br><span class="line">        速度框.内容 ＝ “700”</span><br><span class="line">    .如果真结束</span><br><span class="line"></span><br><span class="line">.否则</span><br><span class="line"></span><br><span class="line">.如果结束</span><br><span class="line">时钟1.时钟周期 ＝ 到整数 (速度框.内容)</span><br><span class="line">.如果 (管理员 ＝ 假)</span><br><span class="line">    透明标签1.标题 ＝ “状态：您未激活，最快速度为700，已开始”</span><br><span class="line">.否则</span><br><span class="line">    透明标签1.标题 ＝ “状态：已开始”</span><br><span class="line">.如果结束</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.子程序 _关闭_被单击</span><br><span class="line"></span><br><span class="line">时钟1.时钟周期 ＝ 0</span><br><span class="line">透明标签1.标题 ＝ “状态：已停止”</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2>使用方法：输入刷屏内容后点击开始，再点击需要刷屏的软件的输入框<br>刷屏速度：1000为1秒，100为0.1秒，建议最少输入10，否则容易卡顿</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 易语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 黑科技 </tag>
+            
+            <tag> 易语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>易语言制作连点器</title>
+      <link href="/2024/09/25/240925001/"/>
+      <url>/2024/09/25/240925001/</url>
+      
+        <content type="html"><![CDATA[<h1 id="易语言制作连点器"><a href="#易语言制作连点器" class="headerlink" title="易语言制作连点器"></a>易语言制作连点器</h1><p>注意：本文章仅供学习交流，请勿用于非法用途！</p><h2 id="窗口界面"><a href="#窗口界面" class="headerlink" title="窗口界面"></a>窗口界面</h2><p>这里只介绍我们主要功能的界面内容，其余注释等UI、标签可自行添加。</p><ul><li>按钮1：点击按钮用于测试是否开启连点。</li><li>编辑框1：用于显示当前连点数量,只读。</li><li>标签3：用于显示当前连点状态。</li><li>时钟1：用于寻找鼠标坐标并模拟点击。</li><li>时钟2：监测按钮是否按下开始连点或关闭连点。<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="Dll自定义表"><a href="#Dll自定义表" class="headerlink" title="Dll自定义表"></a>Dll自定义表</h3>这里我们需要利用一个dll文件，用于模拟鼠标点击。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.版本 2</span><br><span class="line"></span><br><span class="line">.DLL命令 监视热键, 整数型, , &quot;GetAsyncKeyState&quot;</span><br><span class="line">    .参数 键值, 整数型</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="启动窗口"><a href="#启动窗口" class="headerlink" title="启动窗口"></a>启动窗口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">.版本 2</span><br><span class="line">.支持库 eAPI</span><br><span class="line"></span><br><span class="line">.程序集 窗口程序集_启动窗口</span><br><span class="line">.程序集变量 a, 整数型</span><br><span class="line"></span><br><span class="line">.子程序 __启动窗口_创建完毕</span><br><span class="line"></span><br><span class="line">时钟2.时钟周期 ＝ 1</span><br><span class="line"></span><br><span class="line">.子程序 _时钟2_周期事件</span><br><span class="line"></span><br><span class="line">.如果真 (监视热键 (#F1键) ≠ 0)</span><br><span class="line">    时钟1.时钟周期 ＝ 1</span><br><span class="line">    标签3.标题 ＝ “状态：已开启”</span><br><span class="line">.如果真结束</span><br><span class="line">.如果真 (监视热键 (#F2键) ≠ 0)</span><br><span class="line">    时钟1.时钟周期 ＝ 0</span><br><span class="line">    标签3.标题 ＝ “状态：已关闭”</span><br><span class="line">.如果真结束</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.子程序 _时钟1_周期事件</span><br><span class="line"></span><br><span class="line">模拟鼠标点击 (取鼠标水平位置 (), 取鼠标垂直位置 (), )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.子程序 _按钮1_被单击</span><br><span class="line"></span><br><span class="line">a ＝ a ＋ 1</span><br><span class="line">编辑框1.内容 ＝ “点击数：” ＋ 到文本 (a)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2>运行只需要使用F1键开启，F2键关闭即可。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 易语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 黑科技 </tag>
+            
+            <tag> 易语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Dlib人脸识别</title>
       <link href="/2024/09/21/240921001/"/>
       <url>/2024/09/21/240921001/</url>
@@ -115,11 +177,11 @@
       
         <tags>
             
-            <tag> 加密 </tag>
-            
             <tag> 英语 </tag>
             
             <tag> 单词本 </tag>
+            
+            <tag> 加密 </tag>
             
         </tags>
       
