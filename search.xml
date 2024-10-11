@@ -262,11 +262,11 @@
       
         <tags>
             
+            <tag> 加密 </tag>
+            
             <tag> 英语 </tag>
             
             <tag> 单词本 </tag>
-            
-            <tag> 加密 </tag>
             
         </tags>
       
@@ -439,9 +439,9 @@
       
       <categories>
           
-          <category> 编程语言 </category>
-          
           <category> GXNU </category>
+          
+          <category> 编程语言 </category>
           
           <category> 比赛 </category>
           
