@@ -293,9 +293,9 @@
       
         <tags>
             
-            <tag> CET </tag>
-            
             <tag> 英语 </tag>
+            
+            <tag> CET </tag>
             
         </tags>
       
@@ -408,9 +408,9 @@
           
           <category> music </category>
           
-          <category> 混音 </category>
-          
           <category> 比赛 </category>
+          
+          <category> 混音 </category>
           
       </categories>
       
