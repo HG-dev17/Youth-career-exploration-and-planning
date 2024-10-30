@@ -262,9 +262,9 @@
       
         <tags>
             
-            <tag> 英语 </tag>
-            
             <tag> 加密 </tag>
+            
+            <tag> 英语 </tag>
             
             <tag> 单词本 </tag>
             
@@ -408,18 +408,18 @@
           
           <category> music </category>
           
-          <category> 混音 </category>
-          
           <category> 比赛 </category>
+          
+          <category> 混音 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 混音 </tag>
-            
             <tag> 大计赛 </tag>
+            
+            <tag> 混音 </tag>
             
             <tag> StudioOne </tag>
             
@@ -454,9 +454,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> CRAIC </tag>
+            
+            <tag> Python </tag>
             
             <tag> ROS </tag>
             
@@ -487,9 +487,9 @@
       
         <tags>
             
-            <tag> music </tag>
-            
             <tag> 混音 </tag>
+            
+            <tag> music </tag>
             
         </tags>
       
