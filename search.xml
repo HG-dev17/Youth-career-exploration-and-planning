@@ -293,9 +293,9 @@
       
         <tags>
             
-            <tag> CET </tag>
-            
             <tag> 英语 </tag>
+            
+            <tag> CET </tag>
             
         </tags>
       
@@ -408,18 +408,18 @@
           
           <category> music </category>
           
-          <category> 比赛 </category>
-          
           <category> 混音 </category>
+          
+          <category> 比赛 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 大计赛 </tag>
-            
             <tag> 混音 </tag>
+            
+            <tag> 大计赛 </tag>
             
             <tag> StudioOne </tag>
             
@@ -454,9 +454,9 @@
       
         <tags>
             
-            <tag> CRAIC </tag>
-            
             <tag> Python </tag>
+            
+            <tag> CRAIC </tag>
             
             <tag> ROS </tag>
             
@@ -487,9 +487,9 @@
       
         <tags>
             
-            <tag> 混音 </tag>
-            
             <tag> music </tag>
+            
+            <tag> 混音 </tag>
             
         </tags>
       
@@ -559,9 +559,9 @@
       
       <categories>
           
-          <category> 编程语言 </category>
-          
           <category> 工具 </category>
+          
+          <category> 编程语言 </category>
           
       </categories>
       
