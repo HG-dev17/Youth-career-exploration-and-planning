@@ -38,7 +38,9 @@
       
       <categories>
           
-          <category> 编程语言 </category>
+          <category> GXNU </category>
+          
+          <category> AI </category>
           
       </categories>
       
@@ -46,6 +48,8 @@
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> AI </tag>
             
             <tag> 大数据 </tag>
             
@@ -423,9 +427,9 @@
           
           <category> 工具 </category>
           
-          <category> AI </category>
-          
           <category> 音频 </category>
+          
+          <category> AI </category>
           
       </categories>
       
